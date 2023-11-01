@@ -6,6 +6,6 @@ function SignIn() {
   //Methods-------------------------------------------------
   //View----------------------------------------------------
 
-  return <h2></h2>;
+  return <h2>Sign In</h2>;
 }
 export default SignIn;

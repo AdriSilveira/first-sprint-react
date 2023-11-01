@@ -4,6 +4,6 @@ function ContactUs() {
   //Context-------------------------------------------------
   //Methods-------------------------------------------------
   //View----------------------------------------------------
-  return <h1>PageNOtFound</h1>;
+  return <h1>Contact Us</h1>;
 }
 export default ContactUs;

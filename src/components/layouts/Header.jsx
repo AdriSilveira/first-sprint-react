@@ -10,7 +10,7 @@ function Header(props) {
     <header>
       <div className="layout">
         <h1> Contribution Log </h1>
-        <p className="welcome">Welcome {props.loggedInUser}</p>
+        <p className="welcome">Welcome! {props.loggedInUser}</p>
       </div>
     </header>
   );
