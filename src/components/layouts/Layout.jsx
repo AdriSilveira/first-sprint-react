@@ -3,7 +3,7 @@ import Footer from "./Footer.jsx";
 import Navbar from "./Navbar.jsx";
 import "./Layout.scss";
 
-function Layout(props.children) {
+function Layout({ children }) {
   //Properties----------------------------------------------
   //Hooks---------------------------------------------------
   //Context-------------------------------------------------
@@ -14,7 +14,7 @@ function Layout(props.children) {
     <div className="centrepane">
       <Header />
       <Navbar />
-      <main>{props.children}</main>
+      <main>{children}</main>
       <Footer />
     </div>
   );
