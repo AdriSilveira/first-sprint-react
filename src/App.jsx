@@ -8,9 +8,16 @@ import "./App.scss";
 
 function App() {
   return (
-    <Layout>
-      <Home />
-    </Layout>
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/pageNotFound" element={<PageNotFound />} />
+          <Route path="/contactUs" element={<ContactUs />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
   );
 }
 
