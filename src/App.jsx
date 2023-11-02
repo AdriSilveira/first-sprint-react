@@ -5,13 +5,16 @@ import SignIn from "./components/Views/SignIn.jsx";
 import ContactUs from "./components/Views/ContactUs.jsx";
 import PageNotFound from "./components/Views/PageNotFound.jsx";
 import "./App.scss";
+import Modules from "./components/Views/Modules.jsx";
 
 function App() {
+  const loggedInUser = "Adriana";
+
   return (
     <BrowserRouter>
-      <Layout>
+      <Layout loggedInUser={loggedInUser}>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Modules />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/pageNotFound" element={<PageNotFound />} />
           <Route path="/contactUs" element={<ContactUs />} />
