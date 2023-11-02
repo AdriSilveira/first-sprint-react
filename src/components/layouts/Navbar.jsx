@@ -14,9 +14,7 @@ function Navbar() {
       <div className="navItem">
         <NavLink to="/">Modules</NavLink>
       </div>
-      {/* <div className="navItem">
-        <NavLink to="/modules">Modules</NavLink>
-      </div> */}
+
       <div className="navItem">
         <NavLink to="/groups" className={getLinkStyle}>
           Groups
