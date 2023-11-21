@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import API from "../apis/API.jsx";
 import "../../App.scss";
 import { Card, CardContainer } from "../UI/Card.jsx";
-import "./Modules.scss";
+import ModuleForm from "../Entity/modules/ModuleForm.jsx";
 
 function Modules() {
   //Initialisation--------------------------------------------------
@@ -14,6 +14,8 @@ function Modules() {
   //State-----------------------------------------------------------
   const [modules, setModules] = useState(null);
   const [loadingMessage, setloadingMessage] = useState("Loading Records...");
+  const [showNewModuleForm, setshowNewModuleForm] = useState(false);
+
   // const [allModules, setAllModules] = useState(null);
 
   //Context---------------------------------------------------------
@@ -29,6 +31,15 @@ function Modules() {
     apiCall(endpoint);
   }, [endpoint]);
 
+  const handleButtonClick = () => {
+    setshowNewModuleForm(true);
+  };
+  const handleCancel = () => {
+    setshowNewModuleForm(false);
+  };
+  const handleSuccess = () => {
+    setshowNewModuleForm(false);
+  };
   //View------------------------------------------------------------
 
   return (
@@ -54,6 +65,15 @@ function Modules() {
           })}
         </CardContainer>
       )}
+      <div>
+        <button type="button" onClick={handleButtonClick}>
+          Add Module
+        </button>
+      </div>
+      {showNewModuleForm && (
+        <ModuleForm onCancel={handleCancel} onSuccess={handleSuccess} />
+      )}
+
       <div className="font">
         <div className="PTSerifCaption-Regular"></div>
         <div className="PlayfairDisplay-VariableFont_wght"></div>

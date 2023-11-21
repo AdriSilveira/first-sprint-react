@@ -1,20 +1,20 @@
 // -----------------------------------------------
 // Imports ///////////////////////////////////////
 // -----------------------------------------------
-@import "../global.scss";
+// @import "../global.scss";
 
 // -----------------------------------------------
 // Styling ///////////////////////////////////////
 // -----------------------------------------------
 
 div#root {
-  background: $PageBackgroundColor;
+  background: white;
   min-height: 100vh;
   display: flex;
   justify-content: center;
 
   & > div.Layout {
-    background: $LayoutBackgroundColor;
+    background: pink;
     width: 100%;
     max-width: 1000px;
     display: grid;
